@@ -1,0 +1,91 @@
+<!DOCTYPE html>	
+<html>
+<head>
+	
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="st.css"/>
+    </head>
+	<body>    
+	<main>
+        <div class="f" id="f">
+            <br>
+             <br>
+             <br>
+            <div class="fi">
+                 <h1>MOTORBIKE COLOR CHANGER</h1>
+            <h4><img src="pix.png" alt="" class id="bike"></h4>
+            <br>
+            <div class="click">
+                <p style="float: left; color:black">Generate Random Colors</p>
+                <p style="color black;">Generate Specific Color</p>
+                <select id="picker" >
+                    <option value='bl'>Blue</option>
+                    <option value='gr'>Grey</option>
+                    <option value='gre'>Green</option>
+                    <option value='ye'>Yellow</option>
+                    <option value='li'>Light Blue</option>
+                    <option value='bla'>Black</option>
+                </select> <br>
+                <center>  <input type="button" onclick='go()'  value="Generate"/> 
+            </center></div>
+           <div class="r">
+
+           <center> <input type="button" onclick='white()' value="Reset"> 
+            </div>
+            <div class="m">
+                <input type="button" onclick='color()'  value="Show"/> </center> <br>
+            </div>
+            </div>
+        </div>
+        <script>
+       
+    function go(){
+        var shuffle = Math.floor(Math.random() * 6);
+        var chosen = document.getElementById("bike");
+        chosen.style.backgroundColor = haroldcolor[shuffle];
+}
+function color(){
+    var select = document.getElementById("picker").value;
+    
+    if (select == "bl")
+    {
+        document.getElementById("bike").style.backgroundColor = "blue";}
+    else if (select == "gr")
+    {
+        document.getElementById("bike").style.backgroundColor = "grey";
+    }
+    else if (select == "gre")
+    {
+        document.getElementById("bike").style.backgroundColor = "green";
+    }
+    else if (select == "ye")
+    {
+        document.getElementById("bike").style.backgroundColor = "yellow";
+    }
+    else if (select == "li")
+    {
+        document.getElementById("bike").style.backgroundColor = "lightblue";
+    }
+    else if (select == "bla")
+    {
+        document.getElementById("bike").style.backgroundColor = "black";
+    }
+   
+}
+
+function white(){
+    document.getElementById("bike").style.backgroundColor = "white";
+}
+var haroldcolor = ['blue','grey','green','yellow','lightblue','black'];
+    var haroldcolorIndex = 0;
+            </script>
+        </main>
+		
+            
+            </div>        
+    
+	</body>
+
+
+</html>
